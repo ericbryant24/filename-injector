@@ -12,7 +12,11 @@
     "glob": "^5.0.10",
     "q": "^1.4.1"
   },
+  "preferGlobal": true,
   "bin": {
       "filename-injector": "app.js"
+  },
+  "engines": {
+   "node": ">= 10.x"
   }
 }
