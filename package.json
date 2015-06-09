@@ -11,5 +11,8 @@
   "dependencies": {
     "glob": "^5.0.10",
     "q": "^1.4.1"
+  },
+  "bin": {
+      "filename-injector": "app.js"
   }
 }
