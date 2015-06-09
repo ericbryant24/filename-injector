@@ -32,7 +32,15 @@ function Program() {
         '-f': commands.files,
         '--files': commands.files,
         '-t': commands.template,
-        '--template': commands.template,
+        '--template': commands.template
+    };
+
+    // I was seeing these but I have no idea where they were coming from
+    var system = {
+        '-inputFormat': true,
+        '-outputFormat': true,
+        'text': true,
+        'xml': true
     };
 
     function processArguments() {
@@ -41,6 +49,11 @@ function Program() {
         var promises = [];
         for(var i = 2; i < process.argv.length; i++) {
             var arg = process.argv[i];
+
+            if(system[arg]) {
+                continue;
+            }
+
             if(options[arg]) {
                 prevCommand = options[arg];
             } else if (prevCommand){
