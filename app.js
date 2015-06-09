@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var glob = require("glob"),
     Q = require("q"),
     fs = require('fs');
